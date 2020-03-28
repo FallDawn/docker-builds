@@ -19,7 +19,7 @@ ENV UID=1000 \
 RUN apk add --no-cache ca-certificates su-exec
 
 COPY --from=builder /tmp/syncthing/stdiscosrv /bin/stdiscosrv
-COPY --from=builder /tmp/syncthing/script/docker-entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /
 
 EXPOSE 19200 8443
 

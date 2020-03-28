@@ -20,7 +20,7 @@ ENV UID=1000 \
 RUN apk add --no-cache ca-certificates su-exec
 
 COPY --from=builder /tmp/syncthing/syncthing /bin/syncthing
-COPY --from=builder /tmp/syncthing/script/docker-entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /
 
 EXPOSE 8384 22000 21027/udp
 
